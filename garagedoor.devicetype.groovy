@@ -41,6 +41,7 @@ metadata {
     capability "Contact Sensor"
     capability "Refresh"
     capability "Polling"
+    capability "Momentary"
 
     attribute "open", "string"
     attribute "closed", "string"
@@ -85,6 +86,10 @@ def open() {
   doorMove('doorcontrol');
 }
 def close() {
+  doorMove('doorcontrol');
+}
+
+def push() {
   doorMove('doorcontrol');
 }
 
